@@ -1,40 +1,40 @@
-// script.js
+// Warten bis DOM geladen ist
+document.addEventListener("DOMContentLoaded", () => {
+  // IntersectionObserver für Fade-In-Elemente
+  const observerOptions = {
+    root: null,
+    threshold: 0.1, // Trigger, wenn 10% sichtbar
+  };
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("visible");
+        obs.unobserve(entry.target); // nur einmal einblenden, dann nicht weiter beobachten
+      }
+    });
+  }, observerOptions);
+  // alle Elemente mit .fade-in beobachten
+  document.querySelectorAll(".fade-in").forEach((el) => observer.observe(el));
 
-// Scroll-Animation per Intersection Observer
-const faders = document.querySelectorAll(".fade-in");
-
-const options = {
-  threshold: 0.1,
-};
-
-const observer = new IntersectionObserver(function (entries, observer) {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      observer.unobserve(entry.target);
+  // Formular-Validierung beim Absenden
+  const form = document.getElementById("contact-form");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    // Eingabefelder auslesen
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+    // Validierung der Felder
+    if (!name || !email || !message) {
+      alert("Bitte füllen Sie alle Felder aus.");
+      return;
     }
-  });
-}, options);
-
-faders.forEach((fader) => {
-  observer.observe(fader);
-});
-
-// Formular-Validierung
-const form = document.getElementById("contact-form");
-
-form.addEventListener("submit", function (event) {
-  const name = document.getElementById("name").value.trim();
-  const email = document.getElementById("email").value.trim();
-  const message = document.getElementById("message").value.trim();
-
-  // Grundvalidierung
-  if (name.length === 0 || message.length === 0 || !email.includes("@")) {
-    event.preventDefault();
-    alert(
-      'Bitte füllen Sie alle Felder korrekt aus (E-Mail muss ein "@" enthalten).',
-    );
-  } else {
+    if (email.indexOf("@") === -1) {
+      alert("Bitte geben Sie eine gültige E-Mail-Adresse ein.");
+      return;
+    }
+    // Falls alles OK:
     alert("Danke für Ihre Nachricht!");
-  }
+    form.reset();
+  });
 });

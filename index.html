@@ -1,133 +1,125 @@
-<!-- index.html -->
 <!doctype html>
 <html lang="de">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Steyndral – Webdesign in Südwestfalen</title>
-
-        <!-- Favicon / Tab-Logo -->
-        <link rel="icon" type="image/png" href="favicon.png" />
-
-        <!-- Google Font: Inter -->
+        <!-- Einbindung des Google Fonts "Inter" -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
             rel="stylesheet"
+            href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
         />
-
-        <!-- Stylesheet -->
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <!-- Haupt-CSS einbinden -->
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <!-- Header mit Navigation -->
+        <!-- Header mit Logo und Navigation (sticky durch CSS) -->
         <header>
-            <div class="container">
-                <div class="logo-container">
-                    <img
-                        src="favicon.png"
-                        alt="Steyndral Logo"
-                        class="logo-img"
-                    />
-                    <h1 class="logo">Steyndral</h1>
-                </div>
-                <nav>
-                    <ul>
-                        <li><a href="#start">Start</a></li>
-                        <li><a href="#ueber-uns">Über uns</a></li>
-                        <li><a href="#leistungen">Leistungen</a></li>
-                        <li><a href="#kontakt">Kontakt</a></li>
-                    </ul>
-                </nav>
+            <div class="logo-title">
+                <img src="favicon.png" alt="Steyndral Logo" class="logo-img" />
+                <span class="site-name">Steyndral</span>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="#start">Start</a></li>
+                    <li><a href="#ueber-uns">Über uns</a></li>
+                    <li><a href="#leistungen">Leistungen</a></li>
+                    <li><a href="#kontakt">Kontakt</a></li>
+                </ul>
+            </nav>
         </header>
 
-        <!-- Hauptinhalt -->
-        <main>
-            <!-- Startseite Section -->
-            <section id="start" class="section fade-in">
-                <div class="container">
-                    <h2>Willkommen bei Steyndral</h2>
-                    <p>Moderne Webseiten für Unternehmen in Südwestfalen</p>
-                    <a href="#leistungen" class="button">Unsere Leistungen</a>
-                </div>
-            </section>
+        <!-- Start Sektion (Hero) -->
+        <section id="start">
+            <h1>Moderne Webseiten für Unternehmen in Südwestfalen</h1>
+            <p class="subline">Wo Gestaltung auf Substanz trifft.</p>
+            <!-- Untertitel / Claim -->
+            <a href="#leistungen" class="btn cta">Zu unseren Leistungen</a>
+        </section>
 
-            <!-- Über uns Section -->
-            <section id="ueber-uns" class="section fade-in">
-                <div class="container">
-                    <h2>Über uns</h2>
+        <!-- Über uns Sektion -->
+        <section id="ueber-uns" class="fade-in">
+            <h2>Über uns</h2>
+            <p>
+                Steyndral gestaltet moderne Websites mit regionalem Fokus und
+                persönlicher Beratung. Wir sind in Südwestfalen verwurzelt und
+                verbinden hohe technische Kompetenz mit echter Nähe zum Kunden.
+            </p>
+            <p>
+                Unser Anspruch: digitale Lösungen für Strukturen mit Zukunft. In
+                unseren Projekten trifft Gestaltung auf Substanz – neben
+                ästhetischem Design legen wir großen Wert auf fundierte
+                Funktionalität und langfristige Strategie.
+            </p>
+            <p class="motto">
+                <em>„Wir gestalten nicht nur Webseiten – sondern Wirkung.“</em>
+            </p>
+        </section>
+
+        <!-- Leistungen Sektion -->
+        <section id="leistungen">
+            <h2>Leistungen</h2>
+            <div class="services">
+                <div class="service fade-in">
+                    <h3>Webseitenerstellung</h3>
                     <p>
-                        Steyndral ist Ihr zuverlässiger Partner für
-                        maßgeschneiderte Weblösungen in Südwestfalen. Unser
-                        Fokus liegt auf modernem Design, technischer Exzellenz
-                        und lokaler Verankerung.
+                        Komplette Umsetzung Ihrer Website – von Konzeption,
+                        Design bis zur Liveschaltung. Modern, schnell und
+                        individuell.
                     </p>
+                </div>
+                <div class="service fade-in">
+                    <h3>Modernes Webdesign</h3>
                     <p>
-                        Wir verstehen die Bedürfnisse von Unternehmen in
-                        Südwestfalen – ob Handwerksbetrieb, Dienstleister oder
-                        Startup. Unsere Mission: Ihren digitalen Auftritt
-                        zukunftssicher und authentisch zu gestalten.
+                        Ästhetisches und responsives Design, das Ihre Inhalte
+                        zeitgemäß präsentiert. Optimiert für alle Endgeräte und
+                        Browser.
                     </p>
                 </div>
-            </section>
-
-            <!-- Leistungen Section -->
-            <section id="leistungen" class="section fade-in">
-                <div class="container">
-                    <h2>Unsere Leistungen</h2>
-                    <ul class="leistungen">
-                        <li>
-                            <strong>Webseitenerstellung</strong><br />
-                            Erstellung maßgeschneiderter Webseiten, individuell
-                            auf Ihr Unternehmen abgestimmt.
-                        </li>
-                        <li>
-                            <strong>Modernes Webdesign</strong><br />
-                            Responsive Designs mit klarem Aufbau und Fokus auf
-                            Nutzerfreundlichkeit.
-                        </li>
-                        <li>
-                            <strong>SEO-Optimierung</strong><br />
-                            Besser gefunden werden – technische und inhaltliche
-                            Maßnahmen für mehr Sichtbarkeit.
-                        </li>
-                    </ul>
+                <div class="service fade-in">
+                    <h3>SEO-Optimierung</h3>
+                    <p>
+                        Suchmaschinenfreundliche Websites mit sauberem Code und
+                        On-Page-SEO, damit Sie bei Google & Co. besser gefunden
+                        werden.
+                    </p>
                 </div>
-            </section>
+            </div>
+        </section>
 
-            <!-- Kontaktformular -->
-            <section id="kontakt" class="section fade-in">
-                <div class="container">
-                    <h2>Kontakt</h2>
-                    <form id="contact-form">
-                        <label for="name">Name</label>
-                        <input type="text" id="name" name="name" required />
-
-                        <label for="email">E-Mail</label>
-                        <input type="email" id="email" name="email" required />
-
-                        <label for="message">Nachricht</label>
-                        <textarea
-                            id="message"
-                            name="message"
-                            rows="5"
-                            required
-                        ></textarea>
-
-                        <button type="submit">Absenden</button>
-                    </form>
+        <!-- Kontakt Sektion -->
+        <section id="kontakt" class="fade-in">
+            <h2>Kontakt</h2>
+            <p>
+                Sie haben ein Projekt in Aussicht oder Fragen? Schreiben Sie uns
+                – wir freuen uns, von Ihnen zu hören!
+            </p>
+            <form id="contact-form">
+                <div class="form-field">
+                    <label for="name">Name:</label><br />
+                    <input type="text" id="name" name="name" />
                 </div>
-            </section>
-        </main>
+                <div class="form-field">
+                    <label for="email">E-Mail:</label><br />
+                    <input type="text" id="email" name="email" />
+                </div>
+                <div class="form-field">
+                    <label for="message">Nachricht:</label><br />
+                    <textarea id="message" name="message" rows="4"></textarea>
+                </div>
+                <button type="submit" class="btn">Senden</button>
+            </form>
+        </section>
 
         <!-- Footer -->
         <footer>
-            <div class="container">
-                <p>© 2025 Steyndral – Webdesign in Südwestfalen</p>
-            </div>
+            <p>© 2025 Steyndral – Webdesign in Südwestfalen</p>
         </footer>
 
-        <!-- JavaScript -->
+        <!-- Einbindung des Skripts -->
         <script src="script.js"></script>
     </body>
 </html>
