@@ -1,130 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>steyndral</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Playfair Display', serif;
-      background-color: #f4f2ee;
-      color: #1f1f1f;
-      line-height: 1.6;
-    }
+<!-- index.html -->
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Steyndral – Webdesign in Südwestfalen</title>
 
-    header {
-      background-color: #e6e3df;
-      padding: 2rem;
-      text-align: center;
-      border-bottom: 1px solid #ccc;
-    }
+        <!-- Favicon / Tab-Logo -->
+        <link rel="icon" type="image/png" href="favicon.png" />
 
-    .logo {
-      font-size: 2.5rem;
-      letter-spacing: 0.1em;
-      text-transform: lowercase;
-      font-variant: small-caps;
-      font-weight: 700;
-    }
+        <!-- Google Font: Inter -->
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
 
-    nav {
-      margin-top: 1rem;
-    }
+        <!-- Stylesheet -->
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <!-- Header mit Navigation -->
+        <header>
+            <div class="container">
+                <div class="logo-container">
+                    <img
+                        src="favicon.png"
+                        alt="Steyndral Logo"
+                        class="logo-img"
+                    />
+                    <h1 class="logo">Steyndral</h1>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#start">Start</a></li>
+                        <li><a href="#ueber-uns">Über uns</a></li>
+                        <li><a href="#leistungen">Leistungen</a></li>
+                        <li><a href="#kontakt">Kontakt</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-    }
+        <!-- Hauptinhalt -->
+        <main>
+            <!-- Startseite Section -->
+            <section id="start" class="section fade-in">
+                <div class="container">
+                    <h2>Willkommen bei Steyndral</h2>
+                    <p>Moderne Webseiten für Unternehmen in Südwestfalen</p>
+                    <a href="#leistungen" class="button">Unsere Leistungen</a>
+                </div>
+            </section>
 
-    nav a:hover {
-      text-decoration: underline;
-    }
+            <!-- Über uns Section -->
+            <section id="ueber-uns" class="section fade-in">
+                <div class="container">
+                    <h2>Über uns</h2>
+                    <p>
+                        Steyndral ist Ihr zuverlässiger Partner für
+                        maßgeschneiderte Weblösungen in Südwestfalen. Unser
+                        Fokus liegt auf modernem Design, technischer Exzellenz
+                        und lokaler Verankerung.
+                    </p>
+                    <p>
+                        Wir verstehen die Bedürfnisse von Unternehmen in
+                        Südwestfalen – ob Handwerksbetrieb, Dienstleister oder
+                        Startup. Unsere Mission: Ihren digitalen Auftritt
+                        zukunftssicher und authentisch zu gestalten.
+                    </p>
+                </div>
+            </section>
 
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-    }
+            <!-- Leistungen Section -->
+            <section id="leistungen" class="section fade-in">
+                <div class="container">
+                    <h2>Unsere Leistungen</h2>
+                    <ul class="leistungen">
+                        <li>
+                            <strong>Webseitenerstellung</strong><br />
+                            Erstellung maßgeschneiderter Webseiten, individuell
+                            auf Ihr Unternehmen abgestimmt.
+                        </li>
+                        <li>
+                            <strong>Modernes Webdesign</strong><br />
+                            Responsive Designs mit klarem Aufbau und Fokus auf
+                            Nutzerfreundlichkeit.
+                        </li>
+                        <li>
+                            <strong>SEO-Optimierung</strong><br />
+                            Besser gefunden werden – technische und inhaltliche
+                            Maßnahmen für mehr Sichtbarkeit.
+                        </li>
+                    </ul>
+                </div>
+            </section>
 
-    section {
-      margin-bottom: 3rem;
-    }
+            <!-- Kontaktformular -->
+            <section id="kontakt" class="section fade-in">
+                <div class="container">
+                    <h2>Kontakt</h2>
+                    <form id="contact-form">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required />
 
-    h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      margin-bottom: 0.5rem;
-    }
+                        <label for="email">E-Mail</label>
+                        <input type="email" id="email" name="email" required />
 
-    footer {
-      background-color: #e6e3df;
-      text-align: center;
-      padding: 2rem;
-      border-top: 1px solid #ccc;
-      font-size: 0.9rem;
-    }
+                        <label for="message">Nachricht</label>
+                        <textarea
+                            id="message"
+                            name="message"
+                            rows="5"
+                            required
+                        ></textarea>
 
-    .tagline {
-      font-style: italic;
-      color: #555;
-      margin-top: 0.5rem;
-    }
-  </style>
-</head>
-<body>
+                        <button type="submit">Absenden</button>
+                    </form>
+                </div>
+            </section>
+        </main>
 
-  <header>
-    <div class="logo">steyndral</div>
-    <div class="tagline">ventures • investments • esg • design • advertising • think tank</div>
-    <nav>
-      <a href="#ventures">Ventures</a>
-      <a href="#investments">Investments</a>
-      <a href="#esg">ESG</a>
-      <a href="#design">Design</a>
-      <a href="#thinktank">Think Tank</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <p>© 2025 Steyndral – Webdesign in Südwestfalen</p>
+            </div>
+        </footer>
 
-  <main>
-    <section id="ventures">
-      <h2>Ventures</h2>
-      <p>We build and support early-stage companies with scalable business models, shaping innovation across industries.</p>
-    </section>
-
-    <section id="investments">
-      <h2>Investments</h2>
-      <p>Our strategic investments focus on long-term value creation and sustainability, with a keen eye on transformative markets.</p>
-    </section>
-
-    <section id="esg">
-      <h2>ESG</h2>
-      <p>Environmental, Social, and Governance are not just buzzwords — they are principles guiding every decision we make.</p>
-    </section>
-
-    <section id="design">
-      <h2>Design & Advertisement</h2>
-      <p>Our design and branding division crafts timeless identities and forward-thinking campaigns, ensuring impactful presence.</p>
-    </section>
-
-    <section id="thinktank">
-      <h2>Think Tank</h2>
-      <p>steyndral operates as a critical thought partner, developing research and insights to address complex global challenges.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Reach out to us at <a href="mailto:contact@steyndral.com">contact@steyndral.com</a></p>
-    </section>
-  </main>
-
-  <footer>
-    &copy; 2025 steyndral. All rights reserved.
-  </footer>
-
-</body>
+        <!-- JavaScript -->
+        <script src="script.js"></script>
+    </body>
 </html>
