@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projektname – Pitch</title>
+  <!-- Google Fonts: Space Grotesk (300 to 700 weight) -->
+  <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
+  <!-- Satoshi font CSS (local) -->
+  <link rel="stylesheet" href="/Satoshi_Complete/Fonts/WEB/css/satoshi.css" />
+  <style>
+    /* Base Styles */
+    body {
+      margin: 0;
+      font-family: 'Satoshi-Regular', sans-serif;  /* Use Satoshi as default font for body text */
+      color: #000;
+      background: #fff;
+    }
+    h1, h2 {
+      margin: 0.5em 0 0.5em 0;
+      line-height: 1.2;
+    }
+    p {
+      margin: 0 0 1em 0;
+      line-height: 1.5;
+    }
+    ul {
+      padding-left: 1.2em;
+      margin: 0 0 1em 0;
+    }
+    li {
+      margin-bottom: 0.5em;
+    }
+    li::marker {
+      color: #F4C430;  /* saffron-colored bullet points as accents */
+    }
+
+    /* Utility container to limit content width and center it */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 1rem;
+    }
+
+    /* Space Grotesk font classes for headings (as per instructions) */
+    .space-grotesk-title {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 700;  /* heavy weight for main title */
+      font-style: normal;
+      font-optical-sizing: auto;
+      font-size: 3em;     /* large font size for hero title */
+    }
+    .space-grotesk-section {
+      font-family: "Space Grotesk", sans-serif;
+      font-weight: 600;  /* semi-bold for section headings */
+      font-style: normal;
+      font-optical-sizing: auto;
+      font-size: 1.6em;
+    }
+
+    /* Hero Section Styling */
+    #hero {
+      /* Optionally make hero fill most of viewport */
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 0;
+    }
+    #hero .container {
+      /* Center text inside hero */
+      text-align: center;
+      padding: 2rem;
+    }
+
+    /* Sections general styling */
+    section {
+      padding: 60px 0;
+    }
+
+    /* About & Features sections (normal white background, left-aligned text by default) */
+    #about .container, 
+    #features .container {
+      /* left alignment (inherits default) */
+    }
+
+    /* Contact Section Styling (accent background) */
+    #contact {
+      background: #F4C430;  /* saffron yellow background */
+      color: #000;          /* black text for high contrast */
+    }
+    #contact .container {
+      text-align: center;
+    }
+    /* Style the contact link to appear clearly on saffron */
+    #contact a {
+      color: #000;
+      text-decoration: underline;
+      font-weight: bold;
+    }
+    #contact a:hover {
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="container">
+      <h1 class="space-grotesk-title">Projektname</h1>
+      <!-- Optional short tagline/description below the title -->
+      <p>Kurze Projektbeschreibung, die einen Überblick vermittelt.</p>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <h2 class="space-grotesk-section">Über das Projekt</h2>
+      <p>Dieses Projekt hat das Ziel, komplexe Prozesse zu vereinfachen 
+         und neue Maßstäbe in seinem Bereich zu setzen. Hier könnte eine 
+         allgemeine Beschreibung stehen, die das Vorhaben umrissartig erklärt.</p>
+    </div>
+  </section>
+
+  <!-- Features/Values Section -->
+  <section id="features">
+    <div class="container">
+      <h2 class="space-grotesk-section">Leistungsmerkmale</h2>
+      <ul>
+        <li>Innovative Technologie</li>
+        <li>Benutzerfreundliches Design</li>
+        <li>Skalierbare Lösungen</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="space-grotesk-section">Kontakt</h2>
+      <p>Interesse geweckt? Kontaktieren Sie uns unter 
+         <a href="mailto:info@example.com">info@example.com</a>.</p>
+    </div>
+  </section>
+
+</body>
+</html>
