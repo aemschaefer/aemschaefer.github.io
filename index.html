@@ -5,88 +5,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Steyndral – Digitale Wirkung</title>
 
-  <!-- Google Fonts: Space Grotesk -->
+  <!-- Space Grotesk -->
   <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" />
 
-  <!-- Lokale Satoshi Fonts -->
+  <!-- Satoshi lokal -->
   <link rel="stylesheet" href="/Satoshi_Complete/Fonts/WEB/css/satoshi.css" />
 
   <style>
-    /* Global Layout */
     html, body {
-      height: 100vh;
       margin: 0;
+      padding: 0;
+      height: 100vh;
       overflow: hidden;
+      background: #fff;
       font-family: 'Satoshi-Regular', sans-serif;
       color: #000;
-      background: #fff;
     }
 
-    /* Banner */
+    /* Bild-Banner */
     #banner {
-      background-color: #F4C430;
-      color: #000;
-      text-align: center;
-      padding: 0.5rem 1rem;
-      font-family: "Space Grotesk", sans-serif;
-      font-weight: 500;
-      font-size: 1rem;
-    }
-
-    /* Onepage Container */
-    .onepage {
-      height: calc(100vh - 40px); /* Subtract banner height */
+      height: 45%;
+      background: url('banner.jpg') center/cover no-repeat;
       display: flex;
-      flex-direction: column;
       align-items: center;
       justify-content: center;
-      text-align: center;
-      padding: 1.5rem;
-      box-sizing: border-box;
+      position: relative;
     }
 
-    .space-grotesk-title {
+    #banner::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.35); /* dunkle Überlagerung */
+    }
+
+    #banner h1 {
+      position: relative;
+      color: #fff;
       font-family: "Space Grotesk", sans-serif;
       font-weight: 700;
       font-size: 3em;
-      margin: 0.3em 0;
+      text-align: center;
+      margin: 0;
     }
 
-    .space-grotesk-section {
+    /* Inhalt */
+    .main {
+      height: 55%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      padding: 1.5rem;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .section-title {
       font-family: "Space Grotesk", sans-serif;
       font-weight: 600;
-      font-size: 1.4em;
-      margin-top: 1.5em;
-      margin-bottom: 0.5em;
+      font-size: 1.6em;
+      margin: 0.5em 0;
     }
 
-    p {
-      line-height: 1.5;
+    .section-text {
       max-width: 700px;
-      margin: 0.5em auto;
+      font-size: 1em;
+      line-height: 1.5;
+      margin: 0 auto;
     }
 
-    ul {
-      list-style: disc;
-      padding-left: 1.2em;
-      text-align: left;
-      max-width: 600px;
-      margin: 1em auto;
+    .divider {
+      width: 60%;
+      height: 1.5px;
+      background-color: #000;
+      opacity: 0.15;
+      margin: 1rem 0;
     }
 
-    li {
-      margin-bottom: 0.5em;
-    }
-
-    li::marker {
-      color: #F4C430;
-    }
-
-    /* Kontaktbereich */
     .kontakt {
-      margin-top: 2em;
       font-weight: bold;
+      margin-top: 1rem;
     }
 
     .kontakt a {
@@ -102,27 +102,34 @@
 <body>
 
   <!-- Banner -->
-  <div id="banner">
-    Steyndral Studios
-  </div>
+  <section id="banner">
+    <h1>Steyndral</h1>
+  </section>
 
-  <!-- Onepage Inhalt -->
-  <div class="onepage">
-    <h1 class="space-grotesk-title">Steyndral</h1>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. Duis arcu massa, scelerisque vitae, consequat in, pretium a, enim. Pellentesque congue.</p>
+  <!-- Hauptinhalt -->
+  <section class="main">
+    <div>
+      <h2 class="section-title">Design. Strategie. Wirkung.</h2>
+      <p class="section-text">
+     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. Cras elementum ultrices diam. Maecenas ligula massa, varius a, semper congue, euismod non, mi. Proin porttitor, orci nec nonummy molestie, enim est eleifend mi, non fermentum diam nisl sit amet erat. Duis semper. 
+     </p>
+    </div>
 
-    <h2 class="space-grotesk-section">Fokus</h2>
-    <ul>
-      <li>Design</li>
-      <li>Bet</li>
-      <li>Inv</li>
-      <li>Com</li>
-    </ul>
+    <div class="divider"></div>
+
+    <div>
+      <h2 class="section-title">Fokus</h2>
+      <p class="section-text">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed non risus. Suspendisse lectus tortor, dignissim sit amet, adipiscing nec, ultricies sed, dolor. 
+    </p>
+    </div>
+
+    <div class="divider"></div>
 
     <div class="kontakt">
-      <p>Kontakt: <a href="mailto:kontakt@steyndral.de">kontakt@steyndral.de</a></p>
+      Kontakt: <a href="mailto:kontakt@steyndral.de">kontakt@steyndral.de</a>
     </div>
-  </div>
+  </section>
 
 </body>
 </html>
