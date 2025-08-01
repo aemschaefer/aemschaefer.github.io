@@ -1,7 +1,11 @@
 :root {
   --accent: #F4C430;
   --heading-font: "Space Grotesk", sans-serif;
-  --body-font: "Satoshi-Regular", sans-serif;
+  --body-font: "Satoshi-Variable", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 html, body {
@@ -12,6 +16,7 @@ html, body {
   font-family: var(--body-font);
   background: #fff;
   color: #000;
+  line-height: 1.5;
 }
 
 body {
@@ -21,13 +26,14 @@ body {
 
 .hero {
   position: relative;
-  flex: 0 0 40vh;
+  flex: 0 0 45vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   color: #fff;
   background: url('https://images.unsplash.com/photo-1501594907352-04cda38ebc29?auto=format&fit=crop&w=1600&q=80&grayscale') center/cover no-repeat;
+  border-bottom: 1px solid var(--accent);
 }
 
 .hero .overlay {
@@ -38,8 +44,6 @@ body {
 
 .hero h1 {
   margin: 0;
-  font-family: var(--heading-font);
-  font-weight: 600;
   font-size: 3rem;
   position: relative;
 }
@@ -51,6 +55,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
   padding: 0 1rem;
+  width: 100%;
 }
 
 section {
@@ -59,8 +64,6 @@ section {
 }
 
 section h2 {
-  font-family: var(--heading-font);
-  font-weight: 500;
   margin-bottom: 1rem;
 }
 
@@ -87,7 +90,7 @@ li::before {
 }
 
 .kontakt a {
-  color: inherit;
+  color: var(--accent);
   text-decoration: underline;
 }
 
@@ -95,4 +98,18 @@ li::before {
   width: 80%;
   border: none;
   border-top: 1px solid var(--accent);
+}
+
+.space-grotesk-heading {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.space-grotesk-title {
+  font-family: "Space Grotesk", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
 }
